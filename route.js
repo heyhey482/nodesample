@@ -16,7 +16,6 @@ exports.route = (function() {
         var method = req.method.toUpperCase();
 
         if (typeof handlers[pathname][method] === 'function') {
-            console.log('ddd');
             handlers[pathname][method](req, res, body);
         } else {
             res.writeHead(404, {
